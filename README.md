@@ -22,4 +22,4 @@ Selamat datang di repositori Sistem Pendataan Mahasiswa. Program ini adalah bagi
 5. Di halaman tabel, data mahasiswa yang telah disimpan akan ditampilkan dalam bentuk tabel.
 
 ## Demo
-Anda dapat melihat demo proyek ini di Github Page [Sistem Pendataan Mahasiswa - Demo](https://melinda09.github.io/119140019-Melinda-Br-Situmorang-UTS-PEMWEB-RA/)
+Anda dapat melihat demo proyek ini di Github Page [Sistem Pendataan Mahasiswa - Demo](https://melinda119140019.github.io/119140019-Melinda-Br-Situmorang-UTS-PEMWEB-RA/)
