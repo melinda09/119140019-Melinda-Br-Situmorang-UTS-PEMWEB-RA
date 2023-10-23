@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halaman Tabel</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <ul class="nav_link">
+        <li><a href="index.html">Kembali ke Beranda</a></li>
+        <li><a href="formulir.html">Isi Formulir Data</a></li>
+</ul>
+</head>
+<body>
+    <h1>Tabel Biodata Mahasiswa</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Program Studi</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Jenis Kelamin</th>
+                <th>Tanggal Lahir</th>
+                <th>Alamat</th>
+            </tr>
+        </thead>
+        <tbody id="tabelManusiaBody">
+            <!-- Baris data mahasiswa -->
+            <tr class="even">
+                <td>Asep</td>
+                <td>123456</td>
+                <td>IF</td>
+                <td>asep@gmail.com</td>
+                <td>******</td>
+                <td>Laki-laki</td>
+                <td>2001-01-01</td>
+                <td>Jalan-jalan Gg.1</td>
+            </tr>
+            <tr class="odd">
+                <td>Mirna</td>
+                <td>789012</td>
+                <td>DKV</td>
+                <td>mirna@gmail.com</td>
+                <td>******</td>
+                <td>Perempuan</td>
+                <td>2000-10-05</td>
+                <td>Jalan-jalan Gg.2</td>
+            </tr>
+            <tr class="even">
+                <td>Aurora</td>
+                <td>234567</td>
+                <td>Teknik Elektro</td>
+                <td>aurora@gmail.com</td>
+                <td>******</td>
+                <td>Perempuan</td>
+                <td>2001-08-12</td>
+                <td>Jalan-jalan Gg.3</td>
+            </tr>
+            <tr class="odd">
+                <td>Jonson</td>
+                <td>345678</td>
+                <td>Teknik Mesin</td>
+                <td>jonson@gmail.com</td>
+                <td>******</td>
+                <td>Laki-laki</td>
+                <td>2000-04-20</td>
+                <td>Jalan-jalan Gg.4</td>
+            </tr>
+            <tr class="even">
+                <td>Andi</td>
+                <td>456789</td>
+                <td>Astronomi</td>
+                <td>andi@gmail.com</td>
+                <td>******</td>
+                <td>Laki-laki</td>
+                <td>2002-12-30</td>
+                <td>Jalan-jalan Gg.5</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function loadManusia() {
+            var manusiaList = JSON.parse(localStorage.getItem("manusiaList")) || [];
+            var tabelBody = document.getElementById("tabelManusiaBody");
+
+            manusiaList.forEach(function(manusia, index) {
+                var newRow = tabelBody.insertRow(tabelBody.rows.length);
+
+                var cellNama = newRow.insertCell(0);
+                var cellNIM = newRow.insertCell(1);
+                var cellProdi = newRow.insertCell(2);
+                var cellEmail = newRow.insertCell(3);
+                var cellPassword = newRow.insertCell(4);
+                var cellJenisKelamin = newRow.insertCell(5);
+                var cellTglLahir = newRow.insertCell(6);
+                var cellAlamat = newRow.insertCell(7);
+
+                cellNama.innerHTML = manusia.nama;
+                cellNIM.innerHTML = manusia.nim;
+                cellProdi.innerHTML = manusia.prodi;
+                cellEmail.innerHTML = manusia.email;
+                cellPassword.innerHTML = manusia.password;
+                cellJenisKelamin.innerHTML = manusia.jenisKelamin;
+                cellTglLahir.innerHTML = manusia.tglLahir;
+                cellAlamat.innerHTML = manusia.alamat;
+            });
+        }
+
+        loadManusia();
+    </script>
+<footer>
+    <p>&copy; 2023 Melinda Br Situmorang (119140019) - All Rights Reserved</p>
+</footer>
+</body>
+</html>
